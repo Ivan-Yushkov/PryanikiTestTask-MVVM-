@@ -25,6 +25,7 @@ class MainViewController: UIViewController, MainViewControllerProtocol {
         viewModel = MainViewModel(view: self)
         viewModel?.getData()
         setupView()
+
     }
 
     //Setup view methods
@@ -38,6 +39,7 @@ class MainViewController: UIViewController, MainViewControllerProtocol {
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        title = "Main"
     }
     
     //Method to create alert view controller
@@ -71,10 +73,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             createAlert(text: pryanik?.text ?? "")
         case "picture":
             guard let url = pryanik?.url else { fatalError() }
-            present(PictureViewController(url: url, text: pryanik?.text ?? ""), animated: true, completion: nil)
+            let vc = PictureViewController(url: url, text: pryanik?.text ?? "")
+            navigationController?.pushViewController(vc, animated: true)
         case "selector":
             guard let variants = pryanik?.varinats else { fatalError() }
-            present(VariantViewController(variants: variants), animated: true, completion: nil)
+            let vc = VariantViewController(variants: variants)
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

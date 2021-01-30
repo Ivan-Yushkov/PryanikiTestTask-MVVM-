@@ -37,6 +37,7 @@ class VariantViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(VariantTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        title = "Variant"
     }
 }
 

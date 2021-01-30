@@ -30,9 +30,12 @@ class PictureViewModel: PictureViewViewModelType {
     
     
     func getImage() {
-        networkService.downloadImage(urlString: url, completionHandler: { (image) in
-            self.image = image
-            self.view.updateView(image: image)
-        })
+        DispatchQueue.global().async {
+            self.networkService.downloadImage(urlString: self.url, completionHandler: { (image) in
+                self.image = image
+                self.view.updateView(image: image)
+            })
+        }
+        
     }
 }

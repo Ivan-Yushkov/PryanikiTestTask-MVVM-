@@ -45,21 +45,24 @@ class PictureViewController: UIViewController, PictureViewControllerProtocol {
         view.backgroundColor = .white
         view.addSubview(imageView)
         view.addSubview(label)
+        label.backgroundColor = .orange
         label.textAlignment = .center
         imageView.contentMode = .scaleAspectFit
+        title = "Picture"
+
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: view.topAnchor),
+            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            label.heightAnchor.constraint(equalToConstant: 150)
+            label.heightAnchor.constraint(equalToConstant: 100)
         ])
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: label.topAnchor),
+            imageView.topAnchor.constraint(equalTo: label.bottomAnchor),
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
@@ -67,7 +70,10 @@ class PictureViewController: UIViewController, PictureViewControllerProtocol {
     }
     
     public func updateView(image: UIImage) {
-        imageView.image = image
-        label.text = text
+        DispatchQueue.main.async {
+            self.imageView.image = image
+            self.label.text = self.text
+        }
+  
     }
 }
