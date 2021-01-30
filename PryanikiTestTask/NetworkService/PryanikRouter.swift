@@ -12,11 +12,10 @@ import Alamofire
 
 class Network {
     static let mainPath = "https://pryaniky.com/static/json/sample.json"
-    
 }
 
-public enum NetworkRouter: URLRequestConvertible {
-   
+public enum PryanikRouter: URLRequestConvertible {
+    
     case getPryanikyData([String: Any])
     
     public func asURLRequest() throws -> URLRequest {

@@ -8,9 +8,6 @@
 import Foundation
 import Alamofire
 import RxSwift
-import CoreLocation
-
-
 
 
 protocol NetworkServiceProtocol: class {
@@ -25,7 +22,7 @@ class NetworkService: NetworkServiceProtocol {
     func getPryaniky() -> Single<[Pryanik]?> {
         let data = [String: Any]()
        
-        let routing = NetworkRouter.getPryanikyData(data)
+        let routing = PryanikRouter.getPryanikyData(data)
         return Single.create { (single) -> Disposable in
             let request = AF.request(routing).responseData { (response) in
                 let statusCode = response.response?.statusCode

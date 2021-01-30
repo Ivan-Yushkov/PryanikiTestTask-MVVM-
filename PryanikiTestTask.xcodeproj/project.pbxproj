@@ -22,7 +22,7 @@
 		75EA388625C59C85003917F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EA388525C59C85003917F5 /* Assets.xcassets */; };
 		75EA388925C59C85003917F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75EA388725C59C85003917F5 /* LaunchScreen.storyboard */; };
 		75EA389325C59CA6003917F5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA389225C59CA6003917F5 /* NetworkService.swift */; };
-		75EA389E25C59D8E003917F5 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA389D25C59D8E003917F5 /* NetworkRouter.swift */; };
+		75EA389E25C59D8E003917F5 /* PryanikRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA389D25C59D8E003917F5 /* PryanikRouter.swift */; };
 		75EA38A225C59EA1003917F5 /* Pryanik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA38A125C59EA1003917F5 /* Pryanik.swift */; };
 		75EA38A725C59ED6003917F5 /* PryanikyDataForParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA38A625C59ED6003917F5 /* PryanikyDataForParse.swift */; };
 		75EA38AA25C5A05B003917F5 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA38A925C5A05B003917F5 /* DI.swift */; };
@@ -50,7 +50,7 @@
 		75EA388825C59C85003917F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75EA388A25C59C85003917F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75EA389225C59CA6003917F5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		75EA389D25C59D8E003917F5 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		75EA389D25C59D8E003917F5 /* PryanikRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikRouter.swift; sourceTree = "<group>"; };
 		75EA38A125C59EA1003917F5 /* Pryanik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pryanik.swift; sourceTree = "<group>"; };
 		75EA38A625C59ED6003917F5 /* PryanikyDataForParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikyDataForParse.swift; sourceTree = "<group>"; };
 		75EA38A925C5A05B003917F5 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				75EA389225C59CA6003917F5 /* NetworkService.swift */,
-				75EA389D25C59D8E003917F5 /* NetworkRouter.swift */,
+				75EA389D25C59D8E003917F5 /* PryanikRouter.swift */,
 				75EA38A925C5A05B003917F5 /* DI.swift */,
 			);
 			path = NetworkService;
@@ -303,7 +303,7 @@
 				7535A69E25C5DFF400C15DCC /* VariantViewCellViewModel.swift in Sources */,
 				75EA387D25C59C81003917F5 /* AppDelegate.swift in Sources */,
 				75EA38B525C5B7C3003917F5 /* PictureViewController.swift in Sources */,
-				75EA389E25C59D8E003917F5 /* NetworkRouter.swift in Sources */,
+				75EA389E25C59D8E003917F5 /* PryanikRouter.swift in Sources */,
 				7535A6A125C5E14300C15DCC /* VariantTableViewCell.swift in Sources */,
 				75EA38A725C59ED6003917F5 /* PryanikyDataForParse.swift in Sources */,
 				75EA389325C59CA6003917F5 /* NetworkService.swift in Sources */,
